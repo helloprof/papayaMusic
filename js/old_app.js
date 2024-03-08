@@ -19,6 +19,23 @@ function filterSongsByDuration(minDuration, songs) {
 
 }
 
+function filterSongsById(id, songs) {
+    let filteredSongs = []
+
+    songs.forEach((song) => {
+        if (song.id === id ) {
+            filteredSongs.push(song)
+        }
+    })
+
+    return filteredSongs
+
+}
+
+
+let menuDiv = document.getElementById('menu');
+let menuDiv2 = document.querySelector('#menu');
+
 const output = filterSongsByDuration(2, songs)
 
 console.log(output)

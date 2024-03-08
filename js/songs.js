@@ -6,8 +6,8 @@
 
 window.songs = [
     {
-        id: 1,
-        artist: "Drake",
+        songID: 1,
+        artistID: 1,
         title: "Daylight",
         audio: "url",
         albumCover: "url",
@@ -17,8 +17,8 @@ window.songs = [
         explicit: true,
     },
     {
-        id: 2,
-        artist: "Drake",
+        songID: 2,
+        artistID: 1,
         title: "Fear of Heights",
         audio: "url",
         albumCover: "url",
@@ -28,8 +28,8 @@ window.songs = [
         explicit: true,
     },
     {
-        id: 3,
-        artist: "Drake",
+        songID: 3,
+        artistID: 1,
         title: "Away from Home",
         audio: "url",
         albumCover: "url",
