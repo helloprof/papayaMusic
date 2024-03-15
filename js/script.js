@@ -28,18 +28,56 @@ function generateArtistButtons(artists) {
         const artistButton = document.createElement('button')
         artistButton.textContent = artist.name
         artistButton.addEventListener("click", (e) => {
-            console.log("clicked!")
+            const header = document.getElementById("selected-artist")
+            header.textContent = artist.name
+            generateSongsTable(artist.artistID)
         })
 
         menu.appendChild(artistButton)
     })
 }
 
+function generateSongsTable(artistID) {
+    let songsByArtist = songs.filter((song) => song.artistID == artistID)
 
-function onLoad() {
+    const tbody = document.getElementById("songs")
+    tbody.remove()
+    const tbodyReset = document.createElement('tbody')
+    tbodyReset.id = "songs"
+    const table = document.querySelector('table')
+    table.appendChild(tbodyReset)
+
+
+    songsByArtist.forEach((song) => {
+        const tbody = document.getElementById("songs")
+
+        const tableRow = document.createElement('tr')
+        tableRow.addEventListener("click", (e) => {
+            console.log(song)
+        })
+        tbody.appendChild(tableRow)
+
+        const songTitle = document.createElement('td')
+        songTitle.textContent = song.title
+
+        const songAlbum = document.createElement('td')
+        songAlbum.textContent = song.albumName
+
+        const songYear = document.createElement('td')
+        songYear.textContent = song.year
+
+        tableRow.appendChild(songTitle)
+        tableRow.appendChild(songAlbum)
+        tableRow.appendChild(songYear)      
+    })
+    
+} 
+
+
+function main() {
     console.log("page loaded")
     // main function here 
     generateArtistButtons(artists)
 }
 
-window.addEventListener("load", onLoad)
+window.addEventListener("load", main)
