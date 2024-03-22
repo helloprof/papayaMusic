@@ -31,45 +31,72 @@ function generateArtistButtons(artists) {
         artistButton.addEventListener("click", (e) => {
             const header = document.getElementById("selected-artist")
             header.textContent = artist.name
-            generateSongsTable(artist.artistID)
+            generateSongs(artist.artistID)
         })
 
         menu.appendChild(artistButton)
     })
 }
 
-function generateSongsTable(artistID) {
+function generateSongs(artistID) {
     let songsByArtist = songs.filter((song) => song.artistID == artistID)
 
-    const tbody = document.getElementById("songs")
-    tbody.remove()
-    const tbodyReset = document.createElement('tbody')
-    tbodyReset.id = "songs"
-    const table = document.querySelector('table')
-    table.appendChild(tbodyReset)
+    // const tbody = document.getElementById("songs")
+    // tbody.remove()
+    // const tbodyReset = document.createElement('tbody')
+    // tbodyReset.id = "songs"
+    // const table = document.querySelector('table')
+    // table.appendChild(tbodyReset)
+
+    // const cardsDiv = document.getElementById("cards")
+    // cardsDiv.remove()
+
+    // const cardsDivReset = document.createElement('div')
+    // cardsDivReset.id = "cards"
+
+    // const cardsDiv = document.getElementById("cards")
+
 
 
     songsByArtist.forEach((song) => {
-        const tbody = document.getElementById("songs")
+        // const tbody = document.getElementById("songs")
 
-        const tableRow = document.createElement('tr')
-        tableRow.addEventListener("click", (e) => {
-            console.log(song)
-        })
-        tbody.appendChild(tableRow)
+        // const tableRow = document.createElement('tr')
+        // tableRow.addEventListener("click", (e) => {
+        //     console.log(song)
+        // })
+        // tbody.appendChild(tableRow)
 
-        const songTitle = document.createElement('td')
-        songTitle.textContent = song.title
+        // const existingCards = document.getElementById("cards")
+        // if (existingCards) {
+        //     existingCards.remove()
+        // }
 
-        const songAlbum = document.createElement('td')
-        songAlbum.textContent = song.albumName
+        // const cards = document.createElement('div')
+        // cards.id = "cards"
 
-        const songYear = document.createElement('td')
-        songYear.textContent = song.year
+        cards = document.getElementById("cards")
 
-        tableRow.appendChild(songTitle)
-        tableRow.appendChild(songAlbum)
-        tableRow.appendChild(songYear)      
+        const card = document.createElement('div')
+        card.className = "card"
+
+        cards.appendChild(card)
+
+        const img = document.createElement('img')
+        img.src = song.albumCover
+        
+        const h4 = document.createElement('h4')
+        h4.textContent = song.albumName
+
+        const p = document.createElement('p')
+        p.textContent = song.title
+        
+        card.appendChild(img)
+        card.appendChild(h4)
+        card.appendChild(p)
+
+
+
     })
     
 } 
