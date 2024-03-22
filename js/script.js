@@ -27,6 +27,7 @@ function generateArtistButtons(artists) {
     artists.forEach(function(artist) {
         const artistButton = document.createElement('button')
         artistButton.textContent = artist.name
+        artistButton.className = "artistButton"
         artistButton.addEventListener("click", (e) => {
             const header = document.getElementById("selected-artist")
             header.textContent = artist.name
