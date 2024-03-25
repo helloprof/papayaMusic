@@ -29,8 +29,22 @@ function generateArtistButtons(artists) {
         artistButton.textContent = artist.name
         artistButton.className = "artistButton"
         artistButton.addEventListener("click", (e) => {
+
+
             const header = document.getElementById("selected-artist")
             header.textContent = artist.name
+
+            const existingCards = document.getElementById("cards")
+            if (existingCards) {
+                existingCards.remove()
+            }
+    
+            const cards = document.createElement('div')
+            cards.id = "cards"
+    
+            const main = document.querySelector('main')
+            main.appendChild(cards)
+
             generateSongs(artist.artistID)
         })
 
@@ -67,15 +81,7 @@ function generateSongs(artistID) {
         // })
         // tbody.appendChild(tableRow)
 
-        // const existingCards = document.getElementById("cards")
-        // if (existingCards) {
-        //     existingCards.remove()
-        // }
-
-        // const cards = document.createElement('div')
-        // cards.id = "cards"
-
-        cards = document.getElementById("cards")
+        const cards = document.getElementById("cards")
 
         const card = document.createElement('div')
         card.className = "card"
