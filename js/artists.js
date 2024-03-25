@@ -11,11 +11,11 @@ window.artists = [
     },  
     {
         artistID: 2,
-        name: "Taylor Swift",
+        name: "Kendrick Lamar",
     },  
     {
         artistID: 3,
-        name: "Eminem",
+        name: "Doja Cat",
     },  
 ];
   
