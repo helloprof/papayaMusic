@@ -8,8 +8,19 @@ body {
 
 .artistButton {
     border-radius: 50%;
-    color: black;
-    background-color: aquamarine;
+    /* color: black;
+    background-color: aquamarine; */
+}
+
+.artistButton:hover {
+    border: solid 1px white;
+}
+
+.artistImg {
+    border-radius: 50%;
+    vertical-align: middle;
+    width: 200px;
+    height: 200px;
 }
 
 .navbar {
@@ -24,11 +35,13 @@ body {
     padding: 10px;
     font-size: 30px;
     border-right: 1px solid #414142; /* You can adjust the width and color */
+    text-align: center;
 }
 
 .main { 
     margin: 10px;
     padding: 10px;
+    width: 100%;
 }
 
 #logo {
@@ -54,7 +67,7 @@ body {
 }
 
 .nav-link {
-    width: 80%;
+    width: 95%;
     padding: 10px;
     margin: 10px;
     font-size: 15px;
@@ -109,3 +122,83 @@ button:hover {
     display: flex;
 } */
 
+.email-form {
+    display: flex;
+    justify-content: center;
+}
+
+#email {
+    margin: 1px;
+    padding: 10px;
+    text-align: center;
+    width: 80%;
+    background-color: #202020;
+    border: 1px solid #414142; /* You can adjust the width and color */
+    color: white;
+}
+
+#join {
+    margin: 1px;
+    padding: 10px;
+    text-align: center;
+    width: 20%;
+    background-color: green;
+    border: 1px solid #414142; /* You can adjust the width and color */
+    color: white;
+}
+
+hr.solid {
+    border-top: 3px solid #bbb;
+  }
+label {
+    text-align: center;
+    color: white;
+}
+
+h1 {
+    color: white;
+    font-family: "Rubik Doodle Shadow", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 100px;
+}
+
+.itunes {
+    /* margin: 10px; */
+    padding: 10px;
+    background-color: #2C2C2C;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    /* height: 10%; */
+}
+
+.apple-box {
+    /* padding-left: 40px;
+    padding-right: 40px; */
+    padding: 15px;
+    background-color: #4D4D4D;
+    width: 50%;
+    text-align: center;
+}
+
+.apple-button {
+    background-color: #3F3F41;
+    border-radius: 20%;
+    color: white;
+    padding: 15px;
+    margin: 4px;
+}
+
+.apple-signin {
+    background-color: #D60018;
+    border-radius: 10%;
+    color: white;
+    padding: 10px;
+    margin: 4px;
+    width: 20%;
+}
+
+/* audio {
+    background-color: #202020;
+} */
