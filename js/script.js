@@ -26,8 +26,14 @@ function generateArtistButtons(artists) {
     const menu = document.querySelector('#menu')
     artists.forEach(function(artist) {
         const artistButton = document.createElement('button')
-        artistButton.textContent = artist.name
+        const artistImg = document.createElement('img')
+        artistImg.src = artist.image
+        artistImg.className = "artistImg"
+        // artistButton.textContent = artist.name
         artistButton.className = "artistButton"
+
+
+        artistButton.appendChild(artistImg)
         artistButton.addEventListener("click", (e) => {
 
 
